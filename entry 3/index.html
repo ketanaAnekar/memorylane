@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="header">
+        <a href="#" class="back"> BACK</a>
+        <a href="#" class="next"> NEXT</a>
+    </div>
+  <div class="now">
+    <h1>Now...</h1>
+  </div>
+  <div class="ltat">
+    <h1> Let's Take A Trip</h1>
+  </div>
+  <div class="dml">
+    <h1> Down Memory Lane</h1>
+  </div>
+
+
+    <div class="di1" id="di1">
+      <img src="ipod.png" alt="img">
+    </div>
+<div class="ipod">
+    <img src="I.png">
+</div>
+
+
+
+  <audio id="audio1" src="The Black Eyed Peas - I Gotta Feeling (Lyrics) copy.mp3"></audio>
+  <audio id="audio2" src="Sean Paul - Temperature (Lyrics) copy.mp3"></audio>
+  <audio id="audio3" src="Coldplay - Paradise (Lyrics) copy.mp3"></audio>
+
+  <script>
+    var audioElements = [document.getElementById("audio1"), document.getElementById("audio2"), document.getElementById("audio3")];
+    var currentAudioIndex = 0;
+
+    function playPause(elementId, audioIndex) {
+      var element = document.getElementById(elementId);
+      var audio = audioElements[audioIndex];
+
+      element.addEventListener("click", function () {
+        // Pause all other audio elements
+        audioElements.forEach(function (element, index) {
+          if (index !== audioIndex) {
+            element.pause();
+          }
+        });
+
+        if (!audio.paused) {
+          audio.pause();
+        } else {
+          audio.play();
+        }
+      });
+    }
+
+    document.getElementById("di1").addEventListener("click", function () {
+      playPause("di1", currentAudioIndex);
+      currentAudioIndex = (currentAudioIndex + 1) % audioElements.length;
+    });
+  </script>
+</body>
+</html>
