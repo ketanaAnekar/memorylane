@@ -1,0 +1,86 @@
+body{
+    background-color: #049a90;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-large;
+    text-align: center;
+    color: aliceblue;
+}
+.now{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 500%;
+  text-align: center;
+  color: #049a90;
+ -webkit-text-stroke: 7px aliceblue;
+}
+.ltat{
+  font-family: "obliqua", sans-serif;
+font-weight: 700;
+font-style: italic;
+  font-size: 250%;
+  text-align: center;
+  color:  #049a90;
+  -webkit-text-stroke: 2px aliceblue;
+  position: relative;
+  top: -100px;
+}
+.dml{
+  font-family: "obliqua", sans-serif;
+font-weight: 700;
+font-style: italic;
+  font-size: 250%;
+  text-align: center;
+  color: #049a90;
+  -webkit-text-stroke: 2px aliceblue;
+  position: relative;
+  top: -180px;
+}
+.di1{
+  position: relative;
+  top: -1300px;
+  left: -600px;
+
+}
+.di2{
+  position: relative;
+  top: -1200px;
+  left: -100px;
+
+}
+.di3{
+  position: relative;
+  top: -1900px;
+  left: 00px;
+
+}
+.comp{
+  position:relative;
+  top: -1600px;
+}
+.box{
+  width: 1200px;
+  height: 1100px;
+  background-color: black;
+  border: 10px dashed white;
+  position: relative;
+  left: 100px;
+}
+
+.back{
+  position: relative;
+  left: -670px;
+  font-family: "indivisible", sans-serif;
+  font-weight: 700;
+  font-style: italic; 
+  color: aliceblue;
+  font-size: 90%;
+
+}
+.next{
+  font-family: "indivisible", sans-serif;
+  font-weight: 700;
+  font-style: italic; 
+  color: aliceblue;
+  position: relative;
+  left: 660px;
+}
+

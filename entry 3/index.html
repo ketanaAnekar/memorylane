@@ -1,66 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style copy.css">
 </head>
 <body>
-    <div class="header">
-        <a href="#" class="back"> BACK</a>
-        <a href="#" class="next"> NEXT</a>
-    </div>
-  <div class="now">
-    <h1>Now...</h1>
-  </div>
-  <div class="ltat">
-    <h1> Let's Take A Trip</h1>
-  </div>
-  <div class="dml">
-    <h1> Down Memory Lane</h1>
-  </div>
+  <div class="header">
+    <a href="../../mysongrec/entry%202/index.html#" class="back"> BACK</a>
+    <a href="../../skippingsongs/entry%204/index.html" class="next"> NEXT</a>
+</div>
 
-
-    <div class="di1" id="di1">
-      <img src="ipod.png" alt="img">
-    </div>
-<div class="ipod">
-    <img src="I.png">
+<div class="now">
+<h1>Now...</h1>
+</div>
+<div class="ltat">
+  <h1> Let's Take A Trip</h1>
+</div>
+<div class="dml">
+  <h1> Down Memeory Lane</h1>
+</div>
+<div class="box"></div>
+<div class="di1">
+  <img src="di.png" alt="img">
+</div>
+<div class=di2>
+  <img src="di.png">
+</div>
+<div class="di3">
+  <img src="di.png">
+</div>
+<div class="comp">
+  <img src="comp.png">
 </div>
 
 
-
-  <audio id="audio1" src="The Black Eyed Peas - I Gotta Feeling (Lyrics) copy.mp3"></audio>
-  <audio id="audio2" src="Sean Paul - Temperature (Lyrics) copy.mp3"></audio>
-  <audio id="audio3" src="Coldplay - Paradise (Lyrics) copy.mp3"></audio>
-
-  <script>
-    var audioElements = [document.getElementById("audio1"), document.getElementById("audio2"), document.getElementById("audio3")];
-    var currentAudioIndex = 0;
-
-    function playPause(elementId, audioIndex) {
-      var element = document.getElementById(elementId);
-      var audio = audioElements[audioIndex];
-
-      element.addEventListener("click", function () {
-        // Pause all other audio elements
-        audioElements.forEach(function (element, index) {
-          if (index !== audioIndex) {
-            element.pause();
-          }
-        });
-
-        if (!audio.paused) {
-          audio.pause();
-        } else {
-          audio.play();
-        }
-      });
-    }
-
-    document.getElementById("di1").addEventListener("click", function () {
-      playPause("di1", currentAudioIndex);
-      currentAudioIndex = (currentAudioIndex + 1) % audioElements.length;
-    });
-  </script>
+<!--<div class="container">
+  <img src="paradise video pic.jpeg" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">Paradise:Coldplay 2011 </div>
+    <audio controls> 
+      <source src="Coldplay - Paradise (Lyrics).mp3" type="audio/mp4">
+     </audio>
+  </div>
+</div>
+<div class="container" style="left: 700px;" style="margin-top: 40px;">
+    <img src="i gotta feeling.jpeg" alt="Avatar" class="image">
+    <div class="overlay" style="background-color: blueviolet;">
+      <div class="text">I Gotta Feeling: Black Eyed Peas 2009 </div>
+      <audio controls> 
+        <source src="The Black Eyed Peas - I Gotta Feeling (Lyrics).mp3" type="audio/mp4">
+       </audio>
+    </div>
+  </div>
+  <div class="container" style="margin-top: 20px;">
+    <img src="temperature.jpeg" alt="Avatar" class="image">
+    <div class="overlay" style="background-color: rgb(202, 29, 29);">
+      <div class="text">Temperature: Sean Paul 2005 </div>
+      <audio controls> 
+        <source src="Sean Paul - Temperature (Lyrics).mp3" type="audio/mp4">
+       </audio>
+    </div>
+  </div>
 </body>
 </html>
